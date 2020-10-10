@@ -4,8 +4,9 @@ USE burger_db;
 CREATE TABLE burgers 
 (
 	id int(10) NOT NULL AUTO_INCREMENT,
-	burger_name VARCHAR(255) NOT NULL,
+	name VARCHAR(255) NOT NULL,
 	devoured BOOLEAN DEFAULT false,
 	createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
 );
+
