@@ -12,13 +12,13 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/burgers", function(req, res) {
+router.post("/api/burger", function(req, res) {
   burger.insertOne(["name", "devoured"], [req.body.name, req.body.devoured], function(result) {
     res.json({id: result.insertId});
   });
 });
 
-router.put("/api/burgers/:id", function(req, res) {
+router.put("/api/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   burger.updateOne(
@@ -34,7 +34,7 @@ router.put("/api/burgers/:id", function(req, res) {
   });
 });
 
-router.delete("/api/burgers/:id", function(req, res) {
+router.delete("/api/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   burger.delete(condition, function(result) {

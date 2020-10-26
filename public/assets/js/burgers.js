@@ -7,7 +7,7 @@ $(function() {
       devoured:justDevoured
     };
 
-    $.ajax("/api/burgers/" + id, {
+    $.ajax("/api/burger/" + id, {
       type: "PUT",
       data: justDevouredState
     }).then(
@@ -28,7 +28,7 @@ $(function() {
       devoured: $("[name=devoured]:checked").val().trim()
     };
 
-    $.ajax("/api/burgers", {
+    $.ajax("/api/burger", {
       type: "POST",
       data: newBurger
     }).then(
@@ -43,7 +43,7 @@ $(function() {
   $(".delete-burger").on("click", function(event) {
     var id = $(this).data("id");
 
-    $.ajax("/api/burgers/" + id, {
+    $.ajax("/api/burger/" + id, {
       type: "DELETE"
     }).then(
       function() {

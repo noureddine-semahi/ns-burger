@@ -1,7 +1,7 @@
 CREATE DATABASE burger_db;
 USE burger_db;
 
-CREATE TABLE burgers 
+CREATE TABLE burger 
 (
 	id int(10) NOT NULL AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
